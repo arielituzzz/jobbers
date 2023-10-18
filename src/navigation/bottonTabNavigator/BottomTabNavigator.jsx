@@ -7,7 +7,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 // import { UserAvatar } from "../../components";
 import { colors } from "../../constants/colors";
 import { Text, View } from "react-native";
-import { Home, UserProfile } from "../../screens";
+import { Home, UserProfile, Orders } from "../../screens";
 // import { useSelector } from "react-redux";
 import styles from "./bottomTabNavigator.style";
 import Feather from "@expo/vector-icons/Feather";
@@ -33,6 +33,17 @@ function BottomTabNavigator() {
           tabBarIcon: ({ focused }) => (
             <View style={focused ? styles.tabBar.iconContainer : null}>
               <Feather name="home" size={24} color={colors.white} />
+            </View>
+          ),
+        }}
+      />
+      <BottomTab.Screen
+        name="Orders"
+        component={Orders}
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <View style={focused ? styles.tabBar.iconContainer : null}>
+              <Feather name="list" size={24} color={colors.white} />
             </View>
           ),
         }}

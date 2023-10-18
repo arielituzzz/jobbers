@@ -1,11 +1,11 @@
 import { StatusBar } from "expo-status-bar";
-import BottomTabNavigator from "./src/navigation/bottonTabNavigator/BottomTabNavigator";
+import MainNavigator from "./src/navigation/MainNavigator";
 import { NavigationContainer } from "@react-navigation/native";
 
 export default function App() {
   return (
     <NavigationContainer>
-      <BottomTabNavigator />
+      <MainNavigator />
     </NavigationContainer>
   );
 }
